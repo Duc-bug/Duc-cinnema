@@ -1,0 +1,189 @@
+.banner1{
+background-size: cover;
+background-position: center;
+height: 300px; /* Adjust the height to make it smaller */
+width: 40%; /* Adjust the width to make it smaller */
+margin: 0 auto; /* Center the banner horizontally */
+display: block; /* Ensure the banner behaves like a block element */
+border-radius: 10px; /* Optional: Add rounded corners */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better appearance */
+}
+.banner2{
+background-size: cover;
+background-position: center;
+height: 300px; /* Adjust the height to make it smaller */
+width: 40%; /* Adjust the width to make it smaller */
+margin: 0 auto; /* Center the banner horizontally */
+display: block; /* Ensure the banner behaves like a block element */
+border-radius: 10px; /* Optional: Add rounded corners */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better appearance */
+}
+.banner3{
+background-size: cover;
+background-position: center;            
+height: 300px; /* Adjust the height to make it smaller */
+width: 40%; /* Adjust the width to make it smaller */
+margin: 0 auto; /* Center the banner horizontally */
+display: block; /* Ensure the banner behaves like a block element */
+border-radius: 10px; /* Optional: Add rounded corners */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better appearance */
+}
+.banner4{
+    background-size: cover;
+    background-position: center;            
+    height: 300px; /* Adjust the height to make it smaller */
+    width: 40%; /* Adjust the width to make it smaller */
+    margin: 0 auto; /* Center the banner horizontally */
+    display: block; /* Ensure the banner behaves like a block element */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better appearance */
+    }
+    .banner5{
+        background-size: cover;
+        background-position: center;            
+        height: 300px; /* Adjust the height to make it smaller */
+        width: 40%; /* Adjust the width to make it smaller */
+        margin: 0 auto; /* Center the banner horizontally */
+        display: block; /* Ensure the banner behaves like a block element */
+        border-radius: 10px; /* Optional: Add rounded corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better appearance */
+        }
+.main{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+.tenlogo{
+    color: aqua;
+    font-size: 1.5rem; /* Adjust the font size */
+    font-weight: bold; /* Make the text bold */
+    margin-left: 10px; /* Add spacing between the logo and the text */
+    text-transform: uppercase; /* Optional: Make the text uppercase */
+    letter-spacing: 1px; /* Optional: Add some spacing between letters */
+}
+
+.logo {
+    height: 50px; /* Adjust the size of the logo */
+    width: 50px; /* Make it a square */
+    border-radius: 50%; /* Make the logo circular */
+    object-fit: cover; /* Ensure the logo fits inside the circle */
+    border: 2px solid aqua; /* Optional: Add a border around the logo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better appearance */
+}
+/* Ensure proper spacing for the "Đặt ngay" button */
+.Booking {
+    display: inline-block; /* Ensure the button behaves like a block element */
+    margin-top: 10px; /* Add spacing above the button */
+    padding: 8px 16px; /* Add padding inside the button */
+    background-color: #007bff; 
+    color: white; 
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-size: 14px; 
+    font-weight: bold; 
+    transition: background-color 0.1s ease; 
+}
+
+.Booking:hover {
+    background-color: #0056b3; 
+}
+
+
+.bg-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; 
+}
+/* Styling for the navigation menu */
+ul.flex {
+    background-color: #f8f9fa; /* Light background color */
+    border-radius: 0; /* Remove rounded corners for full-width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 10px 20px; /* Add padding inside the menu */
+    margin: 0; /* Remove margin to make it full width */
+    width: 100%; /* Ensure the menu spans the full width */
+}
+
+/* Styling for menu items */
+ul.flex li {
+    list-style: none; /* Remove bullet points */
+}
+
+ul.flex li a {
+    display: inline-block;
+    padding: 10px 15px; /* Add padding inside each link */
+    color: #333; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make text bold */
+    border-radius: 5px; /* Rounded corners for hover effect */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for menu items */
+ul.flex li a:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: white; /* White text on hover */
+    transform: scale(1.1); /* Slightly enlarge the item */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Active menu item styling */
+ul.flex li a.active {
+    background-color: #0056b3; /* Darker blue for active item */
+    color: white; /* White text for active item */
+}
+footer {
+    text-align:right; 
+    padding: 20px; 
+    background-color: #007bff; 
+    color: white; 
+    text-align: end;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none; 
+    font-weight: bold; 
+}
+footer a:hover {
+    text-decoration: underline; 
+}
+
+footer p {
+    margin: 5px 0; 
+}
+/* Nút Đăng nhập và Đăng ký */
+.btn-login, .btn-register {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Nhẹ nhàng hơn */
+}
+
+/* Màu sắc dịu cho nút Đăng nhập */
+.btn-login {
+    background-color: #6c757d; /* Màu xám dịu */
+    color: white;
+}
+
+.btn-login:hover {
+    background-color: #5a6268; /* Màu xám đậm hơn khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng nổi khi hover */
+}
+
+/* Màu sắc dịu cho nút Đăng ký */
+.btn-register {
+    background-color: #6c757d; /* Màu xanh nhạt */
+    color: white;
+}
+
+.btn-register:hover {
+    background-color: #5a6268; /* Màu xanh đậm hơn khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng nổi khi hover */
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán</title>
+    <link rel="stylesheet" href="Css/thanhtoan.css">
+    <link rel="stylesheet" href="Css/toast-message.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Thông Tin Thanh Toán</h2>
+        <form id="payment-form">
+            <label for="name">Họ và Tên:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            
+            <label for="phone">Số Điện Thoại:</label>
+            <input type="text" id="phone" required>
+            
+            <div class="movie-details">
+                <h3>Thông Tin Phim</h3>
+                
+                <p><strong>Phim:</strong> <span id="movie"></span></p>
+                
+            </div>
+            
+            <div class="seat-details">
+                <h3>Chi Tiết Đặt Vé</h3>
+                <p><strong>Ghế:</strong> <span id="seat-numbers"></span></p>
+                <p><strong>Loại Ghế:</strong> <span id="seat-type"></span></p>
+                <p><strong>Tổng tiền:</strong> <span id="total-amount">0</span> VND</p>
+            </div>
+            
+            <label for="payment-method">Phương Thức Thanh Toán:</label>                 
+            <select id="payment-method" required>
+                <option value="credit">Thẻ Tín Dụng</option>
+                <option value="momo">MoMo</option>
+            </select>
+            
+            <button type="submit">Xác Nhận Thanh Toán</button>
+        </form>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden">
+        <p>Thanh toán thành công! Cảm ơn bạn đã đặt vé.</p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            let urlParams = new URLSearchParams(window.location.search);
+            let total = urlParams.get('total');
+            let seats = urlParams.get('seats');
+            let seatType = urlParams.get('types');
+            let movieTitle = urlParams.get('movie');
+          
+           
+            
+            $("#total-amount").text(total);
+            $("#seat-numbers").text(seats || "Chưa có ghế nào");
+            $("#seat-type").text(seatType || "Không xác định");
+            $("#movie").text(movieTitle || "Chưa xác định");
+            
+            
+            
+            $('#payment-form').submit(function(event) {
+                event.preventDefault();
+                const paymentMethod = $('#payment-method').val();
+                const paymentData = {
+                    name: $('#name').val(),
+                    email: $('#email').val(),
+                    phone: $('#phone').val(),
+                    total: total,
+                    seats: seats,
+                    movie: movieTitle,
+                    showtime: showtime
+                };
+
+                if (paymentMethod === 'momo') {
+                    processMoMoPayment(paymentData);
+                } else if (paymentMethod === 'credit') {
+                    processCreditCardPayment(paymentData);
+                }
+            });
+
+            function processMoMoPayment(data) {
+                $.ajax({
+                    url: 'http://localhost:3000/momo-payment',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        amount: data.total,
+                        orderId: 'ORDER_' + new Date().getTime(),
+                        orderInfo: `Thanh toán vé xem phim: ${data.movie}`,
+                        returnUrl: 'http://localhost:5500/success.html',
+                        notifyUrl: 'http://localhost:5500/notify.html',
+                    }),
+                    success: function(response) {
+                        if (response.payUrl) {
+                            window.location.href = response.payUrl;
+                        } else {
+                            alert('Thanh toán MoMo thất bại!');
+                        }
+                    },
+                    error: function() {
+                        alert('Có lỗi xảy ra khi kết nối với MoMo!');
+                    }
+                });
+            }
+
+            function processCreditCardPayment(data) {
+                // Example Credit Card API integration
+                $.ajax({
+                    url: 'https://api.example.com/credit-payment',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        name: data.name,
+                        email: data.email,
+                        phone: data.phone,
+                        amount: data.total,
+                        description: `Thanh toán vé xem phim: ${data.movie}`
+                    }),
+                    success: function(response) {
+                        if (response.status === 'success') {
+                            showToast('Thanh toán thành công!');
+                        } else {
+                            alert('Thanh toán thẻ tín dụng thất bại!');
+                        }
+                    },
+                    error: function() {
+                        alert('Có lỗi xảy ra khi kết nối với hệ thống thanh toán!');
+                    }
+                });
+            }
+
+            function showToast(message) {
+                const toast = document.getElementById('toast');
+                toast.textContent = message;
+                toast.classList.remove('hidden');
+                setTimeout(() => {
+                    toast.classList.add('hidden');
+                    window.location.href = "chinh.html";
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>

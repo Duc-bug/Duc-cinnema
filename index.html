@@ -1,0 +1,210 @@
+<html>
+  <head>
+    <script src="Js/chinh.js" defer></script>
+    <link rel="stylesheet" href="Css/chinh.css">
+    <link rel="stylesheet" href="Css/datngay.css">
+    <link rel="stylesheet" href="Css/p.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    
+		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+		<script type="text/javascript">
+			window.tailwind.config = {
+				darkMode: ['class'],
+				theme: {
+					extend: {
+						colors: {
+							border: 'hsl(var(--border))',
+							input: 'hsl(var(--input))',
+							ring: 'hsl(var(--ring))',
+							background: 'hsl(var(--background))',
+							foreground: 'hsl(var(--foreground))',
+							primary: {
+								DEFAULT: 'hsl(var(--primary))',
+								foreground: 'hsl(var(--primary-foreground))'
+							},
+							secondary: {
+								DEFAULT: 'hsl(var(--secondary))',
+								foreground: 'hsl(var(--secondary-foreground))'
+							},
+							destructive: {
+								DEFAULT: 'hsl(var(--destructive))',
+								foreground: 'hsl(var(--destructive-foreground))'
+							},
+							muted: {
+								DEFAULT: 'hsl(var(--muted))',
+								foreground: 'hsl(var(--muted-foreground))'
+							},
+							accent: {
+								DEFAULT: 'hsl(var(--accent))',
+								foreground: 'hsl(var(--accent-foreground))'
+							},
+							popover: {
+								DEFAULT: 'hsl(var(--popover))',
+								foreground: 'hsl(var(--popover-foreground))'
+							},
+							card: {
+								DEFAULT: 'hsl(var(--card))',
+								foreground: 'hsl(var(--card-foreground))'
+							},
+						},
+					}
+				}
+			}
+		</script>
+		<style type="text/tailwindcss">
+			@layer base {
+				:root {
+					--background: 0 0% 100%;
+--foreground: 240 10% 3.9%;
+--card: 0 0% 100%;
+--card-foreground: 240 10% 3.9%;
+--popover: 0 0% 100%;
+--popover-foreground: 240 10% 3.9%;
+--primary: 240 5.9% 10%;
+--primary-foreground: 0 0% 98%;
+--secondary: 240 4.8% 95.9%;
+--secondary-foreground: 240 5.9% 10%;
+--muted: 240 4.8% 95.9%;
+--muted-foreground: 240 3.8% 46.1%;
+--accent: 240 4.8% 95.9%;
+--accent-foreground: 240 5.9% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 5.9% 90%;
+--input: 240 5.9% 90%;
+--ring: 240 5.9% 10%;
+--radius: 0.5rem;
+				}
+				.dark {
+					--background: 240 10% 3.9%;
+--foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+--popover: 240 10% 3.9%;
+--popover-foreground: 0 0% 98%;
+--primary: 0 0% 98%;
+--primary-foreground: 240 5.9% 10%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--muted: 240 3.7% 15.9%;
+--muted-foreground: 240 5% 64.9%;
+--accent: 240 3.7% 15.9%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--ring: 240 4.9% 83.9%;
+				}
+			}
+		</style>
+    <style>
+        body {
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+        
+    </style>
+
+  </head>
+  <body class="bg-gray-100 text-primary-foreground min-h-screen">
+    
+    <nav class="bg-primary text-primary-foreground p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Add the logo here -->
+            <div class="flex items-center space-x-4">
+                <img src="Img/logo duc.webp" alt="Logo" class="logo"> 
+                <h1 class="tenlogo">DUCCINENEMA</h1>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="dangnhap.html" class="btn-login">Đăng nhập</a>
+                <a href="Dangky.html" class="btn-register">Đăng ký</a>
+            </div>
+            
+        </div>
+    </nav>
+    <ul class="flex justify-center space-x-4 mt-4 bg-gray-200 py-2">
+        <li class="menu-list"><a href="index.html" class="main">Trang chủ</a>
+            
+        </li>
+        <li><a href="https://vnexpress.net/giai-tri/phim" class="main">Tin tức</a></li>
+        
+        <li>
+            <a href="thongtinweb.html" class="main">Thông tin</a>
+        </li>
+        <li><a href="sapchieu.html" class="main">Sắp chiếu</a></li>
+        <li><a href="PHP/movies.php" class="main">🎬 Quản lý phim</a></li>
+
+    </ul>
+    <div class="carousel overflow-hidden relative">
+        <!-- Slides -->
+        <div class="slides flex transition-transform duration-500">
+            <div class="slide w-full flex-shrink-0">
+                <img src="Img/giamgia.webp" alt="Banner 1" class="banner1">
+            </div>
+            <div class="slide w-full flex-shrink-0">
+                <img src="Img/hocduongnoiloan.jpg" alt="Banner 2" class="banner2">
+            </div>
+            <div class="slide w-full flex-shrink-0">
+                <img src="Img/lac_troi.jpg" alt="Banner 3" class="banner3">
+            </div>
+            <div class="slide w-full flex-shrink-0">
+                <img src="Img/quy-nhap-trang-sneak-1800_1740997589638.jpg" alt="Banner 4" class="banner4">
+            </div>
+            <div class="slide w-full flex-shrink-0">
+                <img src="Img/interstellar-3_1740390337969.jpg" alt="Banner 5" class="banner5">
+            </div>
+        </div>
+
+        <!-- Dots -->
+        <div class="dots absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <button class="dot w-3 h-3 bg-gray-400 rounded-full"></button>
+            <button class="dot w-3 h-3 bg-gray-400 rounded-full"></button>
+            <button class="dot w-3 h-3 bg-gray-400 rounded-full"></button>
+            <button class="dot w-3 h-3 bg-gray-400 rounded-full"></button>
+            <button class="dot w-3 h-3 bg-gray-400 rounded-full"></button>
+        </div>
+    </div>
+    <section class="container mx-auto py-8 bg-gray-100">
+        <h2 class="text-3xl font-bold mb-4">Đang chiếu</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div class="bg-card p-4 rounded-lg">
+              <img src="Img/Nhà gia tiên.jpg" alt="Movie Poster" class="w-full h-48 object-cover rounded-lg">
+              <h3 class="text-lg font-bold mt-2">Nhà Già Tiên</h3>
+              <p class="text-sm text-muted-foreground">Thể loại:Hài hước*(120 phút)</p>
+              <a href="datngay.html" class="Booking">Đặt ngay</a>
+            </div>
+            <div class="bg-card p-4 rounded-lg">
+                <img src="Img/Quỷ nhập tràng.jpg" alt="Movie Poster" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="text-lg font-bold mt-2">Quỷ nhập tràng</h3>
+                <p class="text-sm text-muted-foreground">Thể loại:Kinh dị(115 phút)</p>
+                <a href="datngay.html" class="Booking">Đặt ngay</a>
+            </div>
+            <div class="bg-card p-4 rounded-lg">
+                <img src="Img/Lạc trôi.jpg" alt="Movie Poster" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="text-lg font-bold mt-2">Lạc trôi</h3>
+                <p class="text-sm text-muted-foreground">Thể loại:Action/Adventure/SF USA(89 phút)</p>  
+                <a href="datngay.html" class="Booking">Đặt ngay</a>
+            </div>
+            <div class="bg-card p-4 rounded-lg">
+                <img src="Img/sat thu vo cung cuc.webp" alt="Movie Poster" class="w-full h-48 object-cover rounded-lg">
+                <h3 class="text-lg font-bold mt-2">Sát thủ vô cùng cực</h3>
+                <p class="text-sm text-muted-foreground">Thể loại:Hài(107 phút)</p>
+                <a href="datngay.html" class="Booking">Đặt ngay</a>
+        
+    
+        </div>
+    </section>
+    
+    
+   
+    <footer class="bg-primary text-primary-foreground p-4 text-center">
+        <p>&copy; 2025 Movie Ticket Booking. All rights reserved.</p>
+        <p>Liên hệ: <a href="tel:+84987654321" class="text-secondary hover:underline">+84 0987654321</a></p>
+        <p>Email: <a href="mailto:support@ducinema.com" class="text-secondary hover:underline">nthienduc5@gmail.com</a></p>
+        <p>Địa chỉ: 212 Nơ trang long,Quận Bình Thạnh,Thành phố Hồ Chí Minh</p>
+    </footer>
+    
+  </body>
+</html>

@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #ffcc00;
+}
+
+.movie-selection, .seat-selection, .legend, .payment {
+    margin-bottom: 20px;
+}
+
+.movie-selection h2, .seat-selection h2, .legend h3, .payment h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+}
+
+.screen {
+    background-color: #ccc;
+    height: 30px;
+    margin: 10px auto;
+    width: auto;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    color: #000;
+}
+
+#seats {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    background-color: #4caf50;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.seat.occupied {
+    background-color: #f44336;
+    cursor: not-allowed;
+}
+
+.seat.selected {
+    background-color: #ff9800;
+}
+
+.seat.normal {
+    background-color: #4caf50;
+}
+
+.seat.vip {
+    background-color: #9c27b0;
+}
+
+.seat.sweetbox {
+    background-color: #e91e63;
+}
+
+.legend div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.legend span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+
+
+.legend .normal {
+    background-color: #4caf50; /* Màu ghế thường */
+}
+
+.legend .vip {
+    background-color: #9c27b0; /* Màu ghế VIP */
+}
+
+.legend .sweetbox {
+    background-color: #e91e63; /* Màu ghế Sweetbox */
+}
+
+.legend .occupied {
+    background-color: #f44336; /* Màu ghế đã đặt */
+}
+
+.payment button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.payment button:hover {
+    background-color: #218838;
+}

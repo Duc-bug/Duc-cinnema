@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Vé Xem Phim</title>
+    <link rel="stylesheet" href="Css/datngay.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Js/datngay.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Đặt Vé Xem Phim</h1>
+        </header>
+
+        <!-- Chọn phim -->
+        <section class="movie-selection">
+            <h2>Chọn Phim</h2>
+            <select id="movie">
+                <option value="50000" selected>Lạc Trôi</option>
+                <option value="60000">Học Đường Nổi Loạn</option>
+                <option value="70000">Quý Ngài Interstellar</option>
+                <option value="80000">Nhà Già Tiên</option>
+            </select>
+        </section>
+
+        <!-- Chọn ghế -->
+        <section class="seat-selection">
+            <h2>Chọn Ghế</h2>
+            <div class="screen">Màn Hình</div>
+            <div id="seats"></div>
+        </section>
+
+        <!-- Hiển thị ghế đã chọn -->
+        <section class="selected-seats">
+            <h3>Ghế bạn đã chọn:</h3>
+            <p id="selected-seats-list">Chưa chọn ghế nào</p>
+        </section>
+
+        <!-- Hướng dẫn -->
+        <section class="legend">
+
+            <div><span class="seat normal"></span> Ghế thường</div>
+            <div><span class="seat vip"></span> Ghế VIP</div>
+            <div><span class="seat sweetbox"></span> Ghế Sweetbox</div>
+        </section>
+
+        <!-- Thanh toán -->
+        <section class="payment">
+            <h3>Tổng tiền: <span id="total">0</span> VND</h3>
+            <button id="pay" >Thanh Toán</button>
+        </section>
+    </div>
+    
+</body>
+</html>

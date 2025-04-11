@@ -1,0 +1,14 @@
+ul {
+    list-style-type: none;
+    color: red;
+    font-size: 20px;
+    font-style: arial; /* Incorrect property - should be font-family */
+}
+h2 {
+    color: black;
+    font-size: 30px;
+}
+h3 {
+    color: black;
+    font-size: 20px;
+}
